@@ -229,7 +229,9 @@ function mark_pos(is_web)
 
     log(msg.info, string.format("Marked %s as end position", to_timestamp(current_pos)), 3)
 
-    local output_name = string.format("%s-cut.%s", str_split(vars.filename, ".")[1], settings.video_extension)
+    -- local output_name = string.format("%s-cut.%s", str_split(vars.filename, ".")[1], settings.video_extension)
+    local output_name = string.format("%s-cut_%s__%s.%s", str_split(vars.filename, ".")[1],vars.pos.start_pos,vars.pos.end_pos, settings.video_extension)
+
 
     -- Cut
     if not ffmpeg_cut(to_timestamp(vars.pos.start_pos), to_timestamp(vars.pos.end_pos), vars.path, output_name) then
