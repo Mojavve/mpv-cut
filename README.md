@@ -1,3 +1,6 @@
+## Point of this fork
+Just a small tweak that allows multiple clips to be made by adding the `to` and `from` time of clip to the filename.
+
 # mpv-cut
 A video cutting/clipping/slicing script for [mpv](https://mpv.io/)
 
