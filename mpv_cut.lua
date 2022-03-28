@@ -232,7 +232,6 @@ function mark_pos(is_web)
     -- local output_name = string.format("%s-cut.%s", str_split(vars.filename, ".")[1], settings.video_extension)
     local output_name = string.format("%s-cut_%s__%s.%s", str_split(vars.filename, ".")[1],vars.pos.start_pos,vars.pos.end_pos, settings.video_extension)
 
-
     -- Cut
     if not ffmpeg_cut(to_timestamp(vars.pos.start_pos), to_timestamp(vars.pos.end_pos), vars.path, output_name) then
         log(msg.error, "Failed to execute ffmpeg! Check log for details.", 10)
